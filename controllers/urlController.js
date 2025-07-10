@@ -1,6 +1,6 @@
 import Url from '../models/Url.js';
 
-const BASE_URL = 'http://localhost:3000';
+const BASE_URL = 'https://url-shortner-roik.onrender.com';
 
 export const shortenUrl = async (req, res, next, utils) => {
   try {
