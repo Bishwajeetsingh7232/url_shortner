@@ -1,8 +1,11 @@
 import Url from '../models/Url.js';
 
-const BASE_URL = 'http://localhost:3000';
+
 
 export const shortenUrl = async (req, res, next, utils) => {
+  const BASE_URL = `${req.protocol}://${req.get('host')}`;
+
+  
   try {
     let { url, expiry } = req.body;
 
