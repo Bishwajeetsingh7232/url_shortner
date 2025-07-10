@@ -1,7 +1,5 @@
 import Url from '../models/Url.js';
 
-
-
 export const shortenUrl = async (req, res, next, utils) => {
   const BASE_URL = `${req.protocol}://${req.get('host')}`;
 
