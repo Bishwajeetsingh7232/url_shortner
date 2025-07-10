@@ -49,23 +49,26 @@ http://localhost:3000
 
 📬 API Endpoints
 Create Short URL
-POST /api/shorten
+
+POST /shorten
+POST : https://url-shortner-roik.onrender.com
+       https://url-shortner-roik.onrender.com/shorten
 
 Body (JSON):
 
 json
 {
-  "longUrl": "https://www.example.com"
+  "url": "https://www.google.com"
 }
-Response:
 
-json
+Response:
 {
-  "shortUrl": "http://localhost:3000/<shortCode>"
+    "shortUrl": "https://url-shortner-roik.onrender.com/-U_69d5Q5"
 }
 
 Redirect Short URL
-GET /:shortCode
+GET /:code
+example /-U_69d5Q5
 When you open the short URL in your browser, it will redirect to the original long URL.
 
 
@@ -75,7 +78,7 @@ Import the included Postman collection (postman_collection.json) or manually cre
 
 Test the endpoints:
 
-POST /api/shorten to create a short URL.
+POST /shorten to create a short URL.
 
 GET /<shortCode> to verify the redirect.
 
@@ -83,6 +86,7 @@ GET /<shortCode> to verify the redirect.
 # Deployment
 This API is deployed on Render:
 
- Production URL: https://url-shortner-roik.onrender.com
+ Production URL Base: https://url-shortner-roik.onrender.com
+Final URL for testing: https://url-shortner-roik.onrender.com/shorten
 
-You can test it using Postman or your browser.
+You can test it using Postman.
